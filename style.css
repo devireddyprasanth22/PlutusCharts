@@ -1,0 +1,170 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*for page load effect*/
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: rotateX(-10deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.back-image {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-image: url(./images/2927307.jpg);
+}
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.centerText {
+  color: whitesmoke;
+  animation: fadeOut 1s ease-in-out 1s forwards;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: #02172d;
+  color: whitesmoke;
+  margin: auto;
+  text-align: center;
+  animation: transitionIn 0.75s;
+}
+.title {
+  color: whitesmoke;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out 1s forwards;
+  animation-delay: 1.5s;
+}
+/*Hamburger menu*/
+.container {
+  text-align: left;
+}
+
+.hamburger-menu {
+  width: 35px;
+  height: 30px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.line {
+  width: 35px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.5s;
+}
+.change .line-1 {
+  transform: rotateZ(-45deg) translate(-8px, 6px);
+}
+.change .line-3 {
+  transform: rotateZ(45deg) translate(-8px, -6px);
+}
+.change .line-2 {
+  opacity: 0;
+}
+.navbar {
+  width: 150px;
+  height: 100%;
+  background-color: #254261;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 40px;
+  left: -300px;
+  transition: all 0.5s;
+}
+.change {
+  left: 0px;
+}
+.nav-list {
+  text-align: left;
+}
+.nav-item {
+  margin: 25px;
+  list-style: none;
+}
+.nav-link {
+  text-decoration: none;
+  color: whitesmoke;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+/*Search bar*/
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  max-width: 550px;
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out 1s forwards;
+  animation-delay: 1.5s;
+}
+.wrapper .input {
+  width: 85%;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.searchbtn {
+  background: navy;
+  width: 10%;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+}
+.searchbtn .fas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+}
