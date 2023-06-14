@@ -109,7 +109,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 40px;
+  top: 0px;
   left: -300px;
   transition: all 0.5s;
 }
@@ -118,10 +118,16 @@ body {
 }
 .nav-list {
   text-align: left;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  height: 50;
 }
 .nav-item {
   margin: 25px;
+  display: flex;
   list-style: none;
+  align-items: flex-start;
 }
 .nav-link {
   text-decoration: none;
