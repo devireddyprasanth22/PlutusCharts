@@ -4,11 +4,13 @@
   "description": "Stock market tracker and analysis tool (work in progress)",
   "main": "../server/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/main.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "request": "^2.88.2"
   }
 }
