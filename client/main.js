@@ -11,8 +11,14 @@ function getStockDetails() {
 
   if (stock.trim() == "") {
     alert("Please enter a ticker");
+  } else {
+    fetch(`/api/stock?symbol=${stock}`)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => console.error(error));
   }
-  console.log(stock.toUpperCase());
 }
 
 const searchBtn = document.querySelector(".searchbtn");
