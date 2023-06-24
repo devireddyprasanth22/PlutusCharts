@@ -4,7 +4,7 @@ MENU_ICON.addEventListener("click", function () {
   NAVBAR.classList.toggle("change");
 });
 const TICKER = document.getElementById("stockTicker");
-const API_KEY = "T16NZIWU8BZ72OZR"; // alpha vantage api key
+// const API_KEY = "T16NZIWU8BZ72OZR"; // alpha vantage api key
 
 function getStockDetails() {
   const stock = TICKER.value;
