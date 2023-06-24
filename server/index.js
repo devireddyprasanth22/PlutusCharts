@@ -6,23 +6,23 @@ const path = require("path");
 const request = require("request");
 const API_KEY = "T16NZIWU8BZ72OZR"; // alpha vantage api key
 
-// const url =
-//   "https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=IBM&apikey=" +
-//   API_KEY;
-
+// serve static files from client dir
 app.use(express.static(path.join(__dirname, "../client")));
 
+// defines a route for the main html page
 app.get("/", (req, res) => {
   const filePath = path.resolve(__dirname, "../client/main.html");
   res.sendFile(filePath);
 });
 
-app.get("/server/main.js", (req, res) => {
+// when req is made for index.js, it sends main.js as response
+app.get("/server/index.js", (req, res) => {
   const filePath = path.resolve(__dirname, "../client/main.js");
   res.setHeader("Content-Type", "application/javascript"); // Set the correct MIME type for JavaScript files
   res.sendFile(filePath);
 });
 
+// defines route for making the api call
 app.get("/api/stock", (req, res) => {
   const stockSymbol = req.query.symbol;
 
