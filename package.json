@@ -2,10 +2,10 @@
   "name": "plutuscharts",
   "version": "1.0.0",
   "description": "Stock market tracker and analysis tool (work in progress)",
-  "main": "../server/main.js",
+  "main": "../server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server/main.js"
+    "start": "node server/index.js"
   },
   "author": "",
   "license": "ISC",
