@@ -4,7 +4,6 @@ MENU_ICON.addEventListener("click", function () {
   NAVBAR.classList.toggle("change");
 });
 const TICKER = document.getElementById("stockTicker");
-// const API_KEY = "T16NZIWU8BZ72OZR"; // alpha vantage api key
 
 function getStockDetails() {
   const stock = TICKER.value;
@@ -16,8 +15,11 @@ function getStockDetails() {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
+        localStorage.setItem("stockData", JSON.stringify(data));
+        console.log("Setting data in local storage");
       })
       .catch((error) => console.error(error));
+    window.location.href = "stockPage.html";
   }
 }
 

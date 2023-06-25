@@ -70,6 +70,12 @@ body {
   animation: fadeIn 1.5s ease-in-out 1s forwards;
   animation-delay: 1.5s;
 }
+.title1 {
+  color: whitesmoke;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
 /*Hamburger menu*/
 .container {
   text-align: left;
