@@ -180,3 +180,13 @@ body {
   transform: translate(-50%, -50%);
   font-size: 18px;
 }
+
+.tickSymb {
+  color: whitesmoke;
+  font-size: larger;
+  font-weight: 200;
+  top: 10%;
+  margin-left: 20%;
+  text-align: left;
+  position: sticky;
+}
