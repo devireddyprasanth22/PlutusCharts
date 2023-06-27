@@ -15,9 +15,19 @@
                 <h2 class="title1">Plutus Finance</h2>
             </a>
         </div>
-        <div class="overlay" style="align-items:unset; justify-content: unset;">
-            <!-- Need to add a div to display the stock data here -->
-            <div id="tickerName" class="tickSymb"></div>
+        <div class="overlay" style="align-items: unset; justify-content: unset;">
+            <div class="stock-info">
+                <h3 class="stock-info-heading">Name:</h3>
+                <div id="tickerName" class="tickSymb"></div>
+            </div>
+            <div class="stock-info">
+                <h3 class="stock-info-heading">Price:</h3>
+                <div id="tickerPrice" class="tickPrice"></div>
+            </div>
+            <div class="stock-info">
+                <h3 class="stock-info-heading">Change:</h3>
+                <div id="tickerChange" class="tickChange"></div>
+            </div>
         </div>
         <div class="container">
             <nav class="navbar">

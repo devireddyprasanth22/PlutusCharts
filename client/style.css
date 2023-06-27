@@ -47,7 +47,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
 }
 .centerText {
   color: whitesmoke;
@@ -191,4 +191,14 @@ body {
   margin-left: 20%;
   text-align: left;
   position: sticky;
+}
+
+.stock-info {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.stock-info-heading {
+  margin-right: 5px;
 }
