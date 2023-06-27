@@ -17,11 +17,14 @@ function getStockDetails() {
         console.log(data);
         localStorage.setItem("stockData", JSON.stringify(data));
         console.log("Setting data in local storage");
+        window.location.href = "stockPage.html";
       })
       .catch((error) => console.error(error));
-    window.location.href = "stockPage.html";
   }
 }
 
 const searchBtn = document.querySelector(".searchbtn");
-searchBtn.addEventListener("click", getStockDetails);
+searchBtn.addEventListener("click", function (event) {
+  event.preventDefault(); // Prevent the default behavior of the anchor tag
+  getStockDetails();
+});
