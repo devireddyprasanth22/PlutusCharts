@@ -47,7 +47,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
 }
 .centerText {
   color: whitesmoke;
@@ -183,22 +183,19 @@ body {
   font-size: 18px;
 }
 
-.tickSymb {
-  color: whitesmoke;
-  font-size: larger;
-  font-weight: 200;
-  top: 10%;
-  margin-left: 20%;
-  text-align: left;
-  position: sticky;
-}
-
 .stock-info {
   display: flex;
-  align-items: center;
+  margin-top: 10%;
   margin-right: 20px;
+  margin: 0 10px;
 }
 
 .stock-info-heading {
   margin-right: 5px;
+}
+
+.stock-info-container {
+  display: flex; /* Display stock info elements in a row */
+  justify-content: center; /* Center the elements horizontally */
+  margin-top: 5%; /* Add some margin for separation */
 }
